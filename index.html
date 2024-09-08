@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <script>
+        function submitData() {
+            var ad = document.getElementById("ad").value;
+            var soyad = document.getElementById("soyad").value;
+            alert("Ad: " + ad + "\nSoyad: " + soyad);
+        }
+
+        // Enter düyməsi basıldığında avtomatik düyməyə basan funksiya
+        document.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                document.getElementById("submitButton").click();
+            }
+        });
+    </script>
+</head>
+<body>
+    <label for="ad">Ad:</label>
+    <input type="text" id="ad" placeholder="Adınızı daxil edin"><br><br>
+
+    <label for="soyad">Soyad:</label>
+    <input type="text" id="soyad" placeholder="Soyadınızı daxil edin"><br><br>
+
+    <button id="submitButton" onclick="submitData()">Göndər</button>
+</body>
+</html>
